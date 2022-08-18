@@ -18,7 +18,6 @@ print("driver standing:")
 get_driver_score(list_of_all_races)
 active_system(list_of_all_races)
 
-print("@@@")
 
 
 
