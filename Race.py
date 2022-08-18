@@ -9,5 +9,8 @@ class Race:
         return f"{self.type}, {self.ranking}, {self.fastest_driver}, {self.name}"
 
 
+    print("e3")
+
+
 
 
