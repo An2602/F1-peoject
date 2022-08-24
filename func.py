@@ -43,6 +43,7 @@ def get_driver_score(all_races):
         return sorted_dict_of_drivers
 
 def get_team_score(sorted_dict_of_drivers):
+    # why not use the teams here?
     Ferrari_score = Drivers_And_Teams.sainz.score + Drivers_And_Teams.leclerc.score
     Red_Bull_score = Drivers_And_Teams.verstappen.score + Drivers_And_Teams.perez.score
     Mercedes_score = Drivers_And_Teams.hamilton.score + Drivers_And_Teams.russell.score
@@ -113,7 +114,7 @@ def fastest_driver(all_races):
     while True:
         fastest_lap = []
         for races in all_races:
-            if races.type == "ragil":
+            if races.type == "ragil": # good. constang like "ragil" can be in race class -see what i did there
                 fastest_lap.append(races.ranking[10])
         fastest_driver = input("which driver number of fastest lap winnings do you want to know?")
         if fastest_driver not in Driver.all_drivers:
@@ -142,6 +143,9 @@ def active_system(list_of_all_races):
         question = input("do you want to do something else?")
         if question == "no":
             break
+        # this is very interesting stuff - maybe it should all be 
+        # in the main menu. or at least give option of DATA in main menu and
+        # then display this menu
         elif question == "yes":
             choose = input("what do you want to do? your options are: \n1. find number of total wins \n2. find number of regular wins \n3. find number of sprint wins \n4. find the fastest driver \nchoose number")
             if choose == "1":
@@ -171,6 +175,9 @@ def add_race(list_of_all_races):
             if len(split_ranking) != 11:
                 print("you have to enter exactly 11 names. let's try again")
                 continue
+            # why not make this code in a loop 
+            # for i in split_ranking:
+            # if split_ranking[i] not in Driver.alldrivers....
             if split_ranking[0] not in Driver.all_drivers or split_ranking[1] not in Driver.all_drivers or\
                     split_ranking[2] not in Driver.all_drivers or split_ranking[3] not in Driver.all_drivers or\
                     split_ranking[4] not in Driver.all_drivers or split_ranking[5] not in Driver.all_drivers or\
@@ -178,6 +185,7 @@ def add_race(list_of_all_races):
                     split_ranking[8] not in Driver.all_drivers or split_ranking[9] not in Driver.all_drivers or split_ranking[10] not in Driver.all_drivers:
                 print("you can only enter drivers names. please try again")
                 continue
+            # if you want to check double why not make a set instead of list?
             if split_ranking[0] in split_ranking[1:10] or split_ranking[1] in split_ranking[2:10] or split_ranking[2] in split_ranking[3:10]\
                     or split_ranking[3] in split_ranking[4:10] or split_ranking[4] in split_ranking[5:10] or split_ranking[5] in split_ranking[6:10]\
                     or split_ranking[6] in split_ranking[7:10] or split_ranking[7] in split_ranking[8:10] or split_ranking[8] in split_ranking[9:10]\
@@ -191,13 +199,14 @@ def add_race(list_of_all_races):
             list_of_all_races.append(new_race)
             return new_race
 
-
+        #This is quite a long function - consider splitting to 2 functions - sprint, regular
         elif race_type == "sprint":
             enter_standing = input("enter list of all drivers from first to eighth")
             split_ranking = enter_standing.split(", ")
             if len(split_ranking) != 8:
                 print("you have to enter exactly 8 names. let's try again")
                 continue
+            # if this code is repeating - better take it out and make it a function
             if split_ranking[0] not in Driver.all_drivers or split_ranking[1] not in Driver.all_drivers or \
                     split_ranking[2] not in Driver.all_drivers or split_ranking[3] not in Driver.all_drivers or \
                     split_ranking[4] not in Driver.all_drivers or split_ranking[5] not in Driver.all_drivers or \

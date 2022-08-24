@@ -1,4 +1,7 @@
 class Race:
+    RAGIL = "ragil"
+    SPRINT = "sprint"
+    
     def __init__(self, type, ranking, fastest_driver, name):
         self.type = type
         self.ranking = ranking

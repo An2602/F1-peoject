@@ -44,7 +44,7 @@ class Team:
         self.team_score = 0
 
 
-
+# you dont really use these teams?
 Ferrari = Team("Ferrari",[leclerc, sainz])
 Red_Bull = Team("Red Bull", [verstappen, perez])
 Mercedes = Team("Mercedes", [hamilton, russell])
