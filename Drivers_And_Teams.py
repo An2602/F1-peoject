@@ -44,7 +44,6 @@ class Team:
         self.team_score = 0
 
 
-# you dont really use these teams?
 Ferrari = Team("Ferrari",[leclerc, sainz])
 Red_Bull = Team("Red Bull", [verstappen, perez])
 Mercedes = Team("Mercedes", [hamilton, russell])
@@ -56,7 +55,10 @@ Alphatauri = Team("Alphatauri", [tsunoda, gasly])
 Aston_Martin = Team("Aston Martin", [stroll, vettel])
 Williams = Team("Williams", [latifi, albon])
 
+# Team.all_teams = {Ferrari.team: Ferrari, Red_Bull.team: Red_Bull, Mercedes.team: Mercedes,
+#                   Alfa_Romeo.team: Alfa_Romeo, Mclaren.team: Mclaren, Alpine.team: Alpine, Haas.team: Haas,
+#                   Alphatauri.team: Alphatauri, Aston_Martin.team: Aston_Martin, Williams.team: Williams}
 
-class DriverList:
-    def __init__(self):
-        self.my_drivers_list = []
+# class DriverList:
+#     def __init__(self):
+#         self.my_drivers_list = []
