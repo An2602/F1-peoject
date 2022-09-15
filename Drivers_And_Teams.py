@@ -27,6 +27,7 @@ stroll = Driver("Lance Stroll", "Canada", 18, "Aston Martin ")
 vettel = Driver("Sebastian Vettel", "Germany", 5, "Aston Martin ")
 latifi = Driver("Nicholas Latifi", "Canada", 6, "Williams")
 albon = Driver("Alexander Albon", "Thailand", 23, "Williams")
+de_vries = Driver("Nick De Vries", "Netherlands", 45, "Williams")
 
 Driver.all_drivers = {leclerc.name: leclerc, sainz.name: sainz, verstappen.name: verstappen,
                       perez.name: perez, hamilton.name: hamilton, russell.name: russell,
@@ -34,7 +35,7 @@ Driver.all_drivers = {leclerc.name: leclerc, sainz.name: sainz, verstappen.name:
                       norris.name: norris, ocon.name: ocon, alonso.name: alonso,
                     magnussen.name: magnussen, schumacher.name: schumacher, tsunoda.name: tsunoda,
                     gasly.name: gasly, stroll.name: stroll, vettel.name: vettel, latifi.name: latifi,
-                      albon.name: albon}
+                      albon.name: albon, de_vries.name: de_vries}
 
 
 class Team:
@@ -53,7 +54,7 @@ Alpine = Team("Alpine", [ocon, alonso])
 Haas = Team("Haas", [magnussen, schumacher])
 Alphatauri = Team("Alphatauri", [tsunoda, gasly])
 Aston_Martin = Team("Aston Martin", [stroll, vettel])
-Williams = Team("Williams", [latifi, albon])
+Williams = Team("Williams", [latifi, albon, de_vries])
 
 # Team.all_teams = {Ferrari.team: Ferrari, Red_Bull.team: Red_Bull, Mercedes.team: Mercedes,
 #                   Alfa_Romeo.team: Alfa_Romeo, Mclaren.team: Mclaren, Alpine.team: Alpine, Haas.team: Haas,
